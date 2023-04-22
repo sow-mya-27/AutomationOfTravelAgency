@@ -1,5 +1,6 @@
 package com.example.automationOfTravelAgency.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,6 +29,7 @@ public class Route {
     private String noOfKms;
 
     @OneToMany(mappedBy = "route", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JsonIgnore
     private List<BookingTable> bookingTables;
 
     public Route(){}

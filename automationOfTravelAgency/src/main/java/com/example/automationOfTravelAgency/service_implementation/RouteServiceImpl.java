@@ -18,7 +18,11 @@ public class RouteServiceImpl implements RouteService {
 
     @Override
     public List<Route> findAll() {
-        return productRepository.findAll();
+
+        List<Route> a= productRepository.findAll();
+        System.out.println("============================");
+        System.out.println(a);
+        return a;
     }
 
     @Override
@@ -45,6 +49,7 @@ public class RouteServiceImpl implements RouteService {
 
     @Override
     public void deleteById(int id) {
+        productRepository.deleteBookings(id);
         productRepository.deleteById(id);
     }
 

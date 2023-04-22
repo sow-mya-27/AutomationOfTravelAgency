@@ -45,6 +45,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public void deleteById(int id) {
+        productRepository.deleteBookings(id);
         productRepository.deleteById(id);
     }
 

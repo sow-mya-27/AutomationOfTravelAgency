@@ -27,6 +27,8 @@ public class RouteController {
 
     @GetMapping("/list")
     public @ResponseBody List<Route> getAllDrivers() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println(productService.findAll());
         return productService.findAll();
     }
 

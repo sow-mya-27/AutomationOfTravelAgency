@@ -45,6 +45,7 @@ public class PassengerServiceImpl implements PassengerService {
 
     @Override
     public void deleteById(int id) {
+        productRepository.deletBookings(id);
         productRepository.deleteById(id);
     }
 

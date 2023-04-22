@@ -45,6 +45,7 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public void deleteById(int id) {
+        productRepository.deleteBookings(id);
         productRepository.deleteById(id);
     }
 

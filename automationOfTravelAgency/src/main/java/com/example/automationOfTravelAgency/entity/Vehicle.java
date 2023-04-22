@@ -1,5 +1,6 @@
 package com.example.automationOfTravelAgency.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,6 +34,7 @@ public class Vehicle {
     private String per_km_type;
 
     @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JsonIgnore
     private List<BookingTable> bookingTables;
 
     public Vehicle(){}
